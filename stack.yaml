@@ -1,0 +1,19 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/2.yaml
+
+packages:
+- .
+
+extra-deps:
+  # This is a repo containing a package called 'array', at various
+  # versions. It consists of a single Lib module, exporting someFunc :: IO ()
+- git: https://github.com/matt-noonan/fake-array-test.git
+
+  #  array-0.5.4.1
+  #commit: be07aefe1a75c48f74db4734959fae037073add8
+
+  #  array-0.5.4.0 (matches version number for 'array' in LTS 17.2)
+  #commit: 6f6c3c12f269b05691729939c0aac294502669bd
+
+  #  array-0.5.3.9
+  commit: cb07a89fb4e6dbd8593260af68843ab65a8a8ba2
